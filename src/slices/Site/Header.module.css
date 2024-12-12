@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+.header {
+    background-color: #f8f9fa;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Manrope', sans-serif;
+  }
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700; /* Bold */
+  font-size: 24px;
+  padding-left: 20px; /* Aumentando o espaçamento à esquerda */
+}
+  
+  .slash {
+    color: #666;
+    font-size: 28px;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  .green {
+    color: #28a745;
+    font-weight: 700;
+  }
+  
+  .blue {
+    color: #001f3f;
+    font-weight: 700;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .link {
+    margin: 0 30px; /* Aumentando o espaçamento entre os links */
+    text-decoration: none;
+    color: #001f3f;
+    font-weight: 700; /* Bold */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Suavização para o hover */
+  }
+  
+  .link:hover {
+    color: #28a745; /* Verde no hover */
+  }
+  
+  .btnContact {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 30px; /* Aumentando o padding à direita e à esquerda */
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700; /* Bold */
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suavização no hover */
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  .btnContact:hover {
+    background-color: #218838; /* Verde mais escuro */
+    color: #e9f5e9; /* Tom de verde claro */
+  }
