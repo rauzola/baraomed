@@ -137,7 +137,7 @@ nav a:active {
     padding: 10px 0;
     text-align: left;
     border-bottom: 1px solid #e0e0e0; /* Linha de separação */
-    width: 100%; /* Certifica-se de que ocupa a largura completa */
+    width: 95%; /* Certifica-se de que ocupa a largura completa */
   }
 
   nav a:last-child {
