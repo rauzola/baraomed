@@ -1,9 +1,7 @@
 "use client"
-
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import React, { useState } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import { useMediaQuery } from 'react-responsive';
 import "./Header.css";
 
@@ -44,18 +42,10 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
           )}
 
           <nav className={`nav ${menuActive ? 'active' : ''}`}>
-            <ScrollLink to="home" smooth={true} duration={500} offset={10}>
-              Home
-            </ScrollLink>
-            <ScrollLink to="services" smooth={true} duration={500} offset={10}>
-              Nossos serviços
-            </ScrollLink>
-            <ScrollLink to="how-it-works" smooth={true} duration={500} offset={10}>
-              Como funciona
-            </ScrollLink>
-            <ScrollLink to="founders" smooth={true} duration={500} offset={10}>
-              Fundadores
-            </ScrollLink>
+            <a href="#">Home</a>
+            <a href="#">Nossos serviços</a>
+            <a href="#">Como funciona</a>
+            <a href="#">Fundadores</a>
 
             {/* Botão "ENTRE EM CONTATO" no menu responsivo */}
             {(isMobile || isTablet) && (
@@ -66,10 +56,7 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
           </nav>
         </div>
 
-
-
         <div className="header-column button-column">
-
           <a href="#" className="contact-button-header">
             ENTRE EM CONTATO
           </a>
