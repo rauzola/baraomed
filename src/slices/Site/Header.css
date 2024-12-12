@@ -1,0 +1,302 @@
+/* Base Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Coluna da logo */
+.header-column.logo-column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.logo {
+  max-width: 100%;
+  height: 50px;
+}
+
+/* Estilo do menu de navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", Sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #616659;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #27ae60;
+}
+
+nav a:active {
+  color: #2ecc71;
+}
+
+/* Coluna do botão de contato */
+.button-column {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-button-header {
+  padding: 10px 20px; /* Ajusta o tamanho do botão */
+  color: #fff; /* Cor do texto */
+  font-family: "Open Sans", Sans-serif;
+  font-weight: 600; /* Aumenta o peso da fonte */
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #27ae60; /* Fundo verde */
+  border: none; /* Remove a borda */
+  border-radius: 4px; /* Retangular com cantos ligeiramente arredondados */
+  transition: background-color 0.3s ease, letter-spacing 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.contact-button-header:hover {
+  background-color: #219150; /* Cor mais escura ao passar o mouse */
+  /* letter-spacing: -0.5px; Aproxima o texto */
+  color: #142E42;
+}
+
+.contact-button-header:active {
+  background-color: #1e8047; /* Fundo ainda mais escuro no clique */
+}
+
+
+/* Menu de navegação no mobile */
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .desktop-only {
+    display: none;
+  }
+
+  .button-column {
+    display: none;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    color: #33373D;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* Linha de separação */
+    width: 100%; /* Certifica-se de que ocupa a largura completa */
+  }
+
+  nav a:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .header-column {
+    /* margin: 0;
+    flex: 1 1 auto; */
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 40px;
+    margin-right: 0;
+  }
+
+  .contact-button-menu {
+    display: block; /* Exibir apenas no menu mobile */
+    margin-top: 15px; /* Adiciona espaço entre os itens do menu */
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Open Sans", Sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease, letter-spacing 0.3s ease;
+  }
+
+  .contact-button-menu:hover {
+    background-color: #219150;
+    letter-spacing: -0.5px;
+  }
+
+  .contact-button-menu:active {
+    background-color: #1e8047;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 769px) and (max-width: 1207px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .button-column {
+    display: none;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+  }
+
+  nav.active {
+    display: flex;
+    padding: 20px 65px;
+  }
+
+  
+
+  nav a {
+    color: #33373D;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* Linha de separação */
+    width: 100%; /* Certifica-se de que ocupa a largura completa */
+  }
+
+  nav a:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+    margin-left: auto;
+    position: relative;
+    z-index: 1001;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* .header-column {
+    margin: 0;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  } */
+
+  .contact-button-menu {
+    display: block; /* Exibir apenas no menu mobile */
+    margin-top: 15px; /* Adiciona espaço entre os itens do menu */
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Open Sans", Sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease, letter-spacing 0.3s ease;
+  }
+
+  .contact-button-menu:hover {
+    background-color: #219150;
+    letter-spacing: -0.5px;
+  }
+
+  .contact-button-menu:active {
+    background-color: #1e8047;
+  }
+}
+
+/* Desktop Responsiveness */
+@media (min-width: 1208px) {
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: transparent;
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
