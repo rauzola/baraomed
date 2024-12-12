@@ -19,7 +19,9 @@
     "@prismicio/react": "^2.9.1",
     "next": "^15.0.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-responsive": "^10.0.0",
+    "react-scroll": "^1.9.0"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.60",
