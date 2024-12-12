@@ -12,11 +12,35 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "teste": {
-          "type": "Text",
+        "logo": {
+          "type": "Image",
           "config": {
-            "label": "teste",
-            "placeholder": ""
+            "label": "logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "link_menu": {
+          "type": "Group",
+          "config": {
+            "label": "link menu",
+            "repeat": true,
+            "fields": {
+              "menu": {
+                "type": "Text",
+                "config": {
+                  "label": "menu",
+                  "placeholder": ""
+                }
+              },
+              "link_do_item": {
+                "type": "Text",
+                "config": {
+                  "label": "link do item",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         }
       },

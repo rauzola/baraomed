@@ -79,18 +79,55 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument;
 
 /**
+ * Item in *Header → Default → Primary → link menu*
+ */
+export interface HeaderSliceDefaultPrimaryLinkMenuItem {
+  /**
+   * menu field in *Header → Default → Primary → link menu*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.link_menu[].menu
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  menu: prismic.KeyTextField;
+
+  /**
+   * link do item field in *Header → Default → Primary → link menu*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.link_menu[].link_do_item
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_do_item: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *Header → Default → Primary*
  */
 export interface HeaderSliceDefaultPrimary {
   /**
-   * teste field in *Header → Default → Primary*
+   * logo field in *Header → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: header.default.primary.teste
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: header.default.primary.logo
+   * - **Documentation**: https://prismic.io/docs/field#image
    */
-  teste: prismic.KeyTextField;
+  logo: prismic.ImageField<never>;
+
+  /**
+   * link menu field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.link_menu[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  link_menu: prismic.GroupField<
+    Simplify<HeaderSliceDefaultPrimaryLinkMenuItem>
+  >;
 }
 
 /**
@@ -233,6 +270,7 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
       HeaderSlice,
+      HeaderSliceDefaultPrimaryLinkMenuItem,
       HeaderSliceDefaultPrimary,
       HeaderSliceVariation,
       HeaderSliceDefault,

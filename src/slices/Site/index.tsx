@@ -20,7 +20,6 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
 
   const toggleMenu = () => {
     setMenuActive(prevState => !prevState);
-    console.log("Menu toggle clicked, menuActive:", !menuActive);
   };
 
   return (
